@@ -12,7 +12,6 @@ BuildRequires:	libgpg-error-devel
 #BuildRequires:	libgsasl-devel <- not packaged yet, why?
 BuildRequires:	libidn-devel
 BuildRequires:	zlib-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 mpop is a small, fast, and portable POP3 client. Its features include
