@@ -1,6 +1,6 @@
 Summary:	A POP3 client that retrieves mail from POP3 mailboxes
 Name:		mpop
-Version:	1.0.17
+Version:	1.0.19
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Networking/Mail
@@ -61,5 +61,3 @@ implementation, many authentication methods, and good support for TLS/SSL.
 %{_bindir}/%{name}
 %{_infodir}/*
 %{_mandir}/man1/*
-
-
