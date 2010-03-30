@@ -1,6 +1,6 @@
 Summary:	A POP3 client that retrieves mail from POP3 mailboxes
 Name:		mpop
-Version:	1.0.19
+Version:	1.0.20
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Networking/Mail
@@ -21,11 +21,9 @@ to mbox files, maildir folders, or a mail delivery agent, a very fast POP3
 implementation, many authentication methods, and good support for TLS/SSL.
 
 %prep
-
 %setup -q
 
 %build
-
 %configure2_5x \
     --enable-threads=pth \
     --disable-rpath \
@@ -40,10 +38,8 @@ implementation, many authentication methods, and good support for TLS/SSL.
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
+rm -rf %{buildroot}
 %makeinstall
-
 %find_lang %{name}
 
 %post
@@ -53,7 +49,7 @@ implementation, many authentication methods, and good support for TLS/SSL.
 %_remove_install_info %{name}.info
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
