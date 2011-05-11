@@ -1,6 +1,6 @@
 Summary:	A POP3 client that retrieves mail from POP3 mailboxes
 Name:		mpop
-Version:	1.0.23
+Version:	1.0.24
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Networking/Mail
