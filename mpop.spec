@@ -1,18 +1,18 @@
 Summary:	A POP3 client that retrieves mail from POP3 mailboxes
 Name:		mpop
-Version:	1.0.24
-Release:	%mkrel 1
+Version:	1.0.27
+Release:	1
 License:	GPLv2+
 Group:		Networking/Mail
 URL:		http://mpop.sourceforge.net/
 Source0:	http://heanet.dl.sourceforge.net/sourceforge/mpop/%{name}-%{version}.tar.bz2
 BuildRequires:	libgcrypt-devel
-BuildRequires:	libgnutls-devel
+BuildRequires:	gnutls-devel
 BuildRequires:	libgpg-error-devel
-#BuildRequires:	libgsasl-devel <- not packaged yet, why?
+BuildRequires:	libgsasl-devel 
+#<- not packaged yet, why?
 BuildRequires:	libidn-devel
 BuildRequires:	zlib-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 mpop is a small, fast, and portable POP3 client. Its features include
@@ -38,8 +38,7 @@ implementation, many authentication methods, and good support for TLS/SSL.
 %make
 
 %install
-rm -rf %{buildroot}
-%makeinstall
+%makeinstall_std
 %find_lang %{name}
 
 %post
@@ -48,11 +47,7 @@ rm -rf %{buildroot}
 %preun
 %_remove_install_info %{name}.info
 
-%clean
-rm -rf %{buildroot}
-
 %files -f %{name}.lang
-%defattr(-,root,root)
 %doc AUTHORS COPYING ChangeLog NEWS NOTES README THANKS
 %{_bindir}/%{name}
 %{_infodir}/*
