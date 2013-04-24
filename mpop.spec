@@ -1,7 +1,7 @@
 Summary:	A POP3 client that retrieves mail from POP3 mailboxes
 Name:		mpop
 Version:	1.0.27
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Networking/Mail
 URL:		http://mpop.sourceforge.net/
@@ -40,8 +40,6 @@ implementation, many authentication methods, and good support for TLS/SSL.
 %install
 %makeinstall_std
 %find_lang %{name}
-
-
 
 %files -f %{name}.lang
 %doc AUTHORS COPYING ChangeLog NEWS NOTES README THANKS
