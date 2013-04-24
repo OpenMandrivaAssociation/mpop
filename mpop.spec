@@ -42,8 +42,6 @@ implementation, many authentication methods, and good support for TLS/SSL.
 %find_lang %{name}
 
 
-%preun
-%_remove_install_info %{name}.info
 
 %files -f %{name}.lang
 %doc AUTHORS COPYING ChangeLog NEWS NOTES README THANKS
