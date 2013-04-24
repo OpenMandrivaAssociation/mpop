@@ -41,8 +41,6 @@ implementation, many authentication methods, and good support for TLS/SSL.
 %makeinstall_std
 %find_lang %{name}
 
-%post
-%_install_info %{name}.info
 
 %preun
 %_remove_install_info %{name}.info
