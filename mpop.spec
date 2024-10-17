@@ -4,7 +4,7 @@ Version:	1.0.27
 Release:	3
 License:	GPLv2+
 Group:		Networking/Mail
-URL:		http://mpop.sourceforge.net/
+URL:		https://mpop.sourceforge.net/
 Source0:	http://heanet.dl.sourceforge.net/sourceforge/mpop/%{name}-%{version}.tar.bz2
 BuildRequires:	libgcrypt-devel
 BuildRequires:	gnutls-devel
